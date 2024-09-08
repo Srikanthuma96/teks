@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srikanth Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: bisque;
+            align-items: center;
+            margin: 0;
+            position: fixed;
+            width: 100vw;
+            z-index: 1000;
+
+
+        }
+
+        .navigation .links ul {
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+            list-style-type: none;
+
+        }
+
+        .navigation .links ul li a {
+            text-decoration: none;
+            color: red;
+            margin-right: 20px;
+            padding-bottom: 5px;
+            
+
+        }
+
+        .navigation .links ul li a:hover {
+            color: orange;
+            margin-bottom: 5px;
+            border-bottom: 2px solid black;
+
+        
+        }
+
+        .navigation .links ul li i {
+            margin: 0px;
+        }
+
+        .navigation .logo {
+            display: flex;
+            align-items: center;
+            width: 177px;
+            justify-content: space-around;
+            margin-left: 20px;
+            transition: 500ms;
+            overflow: hidden;
+        }
+        .navigation .logo:hover{
+            transform: scale(1.3);
+
+        }
+
+        .navigation .links label input {
+            width: 150px;
+            height: 20px;
+            border-radius: 10px;
+
+        }
+
+        .navigation .links label input::placeholder {
+            color: red;
+            text-align: center;
+            border: 0;
+            font-weight: 900;
+            font-size: medium;
+
+        }
+
+        .navigation .links label i:hover {
+            color: orange;
+           
+
+        }
+
+        .navigation .logo label input {
+            width: 50px;
+        }
+
+        .navigation .links ul li a i {
+            padding: 10px;
+        }
+
+        .hero {
+            margin: 0px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 400px;
+
+        }
+
+
+        .hero .brands {
+            display: flex;
+            width: 80vw;
+            overflow: scroll;
+
+
+
+        }
+
+        .hero .brands::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hero .brands img {
+            width: 150px;
+            margin: 30px;
+            height: 120px;
+
+
+        }
+
+        /* .brands .icon{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            width: 80vw;
+
+        }
+        .brands .icon i{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .brands .icon i:hover{
+            background-color: orange;
+            color: white;
+        }*/
+
+        .brands .img1,
+        .img2,
+        .img3,
+        .img4,
+        .img5,
+        .img6,
+        .img7,
+        .img8,
+        .img9,
+        .img10,
+        .img11,
+        .img12,
+        .img13,
+        .img14 {
+            border: 2px solid lightgrey;
+            background-color: rgb(225, 221, 221);
+            margin: 0 20px;
+
+
+        }
+
+
+
+        .hero .cont-icons {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .hero .cont-icons h1 {
+            border-bottom: 2px solid rgb(242, 6, 6);
+
+        }
+
+        .hero .cont-icons h1:hover {
+            color: orange;
+        }
+
+        .hero .cont-icons .icons i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hero .cont-icons .icons {
+            display: flex;
+            justify-content: space-between;
+            width: 70px;
+            transition: 1s;
+        }
+
+        .hero .cont-icons .icons i:hover {
+            background-color: orange;
+            color: #fff;
+        }
+
+        .poster {
+            margin: 10px 100px;
+        }
+
+        .poster img {
+            width: 80vw;
+            padding-bottom: 10px;
+
+        }
+
+        .products .heading h1 {
+            text-align: center;
+            border-bottom: 3px solid red;
+
+            margin: 20px 36vw;
+        }
+
+        .products-img {
+            display: flex;
+            margin: 0 50px;
+            width: 80vw;
+            justify-content: space-evenly;
+            overflow: scroll;
+            position: relative;
+        }
+
+        .products-img::-webkit-scrollbar {
+            display: none;
+        }
+
+        .products-img img {
+            width: 220px;
+            margin: 30px;
+            height: 200px;
+
+
+        }
+
+        .products-img .product1,
+        .product2,
+        .product3,
+        .product4,
+        .product5,
+        .product6,
+        .product7,
+        .product8,
+        .product9,
+        .product10,
+        .product11 {
+            border: 2px solid lightgrey;
+            background-color: rgb(225, 221, 221);
+            margin: 0 20px;
+        }
+
+        .products-img button {
+            width: 15vw;
+            margin: 10px 23px;
+            border-radius: 15px;
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 1s;
+
+        }
+
+        .products-img button:hover {
+            background-color: orange;
+            color: #fff;
+
+        }
+
+        .products-img .product1 p {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(12, 12, 11);
+            color: #fff;
+            position: absolute;
+            bottom: 325px;
+            left: 35px;
+        }
+
+        .products-img .product2 p {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(12, 12, 11);
+            color: #fff;
+            position: absolute;
+            bottom: 325px;
+            left: 360px;
+        }
+
+        .products-img .product3 p {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(12, 12, 11);
+            color: #fff;
+            position: absolute;
+            bottom: 325px;
+            left: 680px;
+
+        }
+
+        .products-img .product4 p {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(12, 12, 11);
+            color: #fff;
+            position: absolute;
+            bottom: 325px;
+            left: 998px;
+
+
+        }
+
+        .products .heading i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .products .heading i:hover {
+            background-color: orange;
+            color: #fff;
+        }
+
+        .products .heading .icon1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 80px;
+            padding-bottom: 20px;
+            margin-right: 250px;
+        }
+
+        .products-img h4 {
+            text-align: center;
+            font-weight: 100;
+            font-size: medium;
+        }
+
+        .products-img h6 {
+            text-align: center;
+            padding: 10px 0;
+            color: green;
+            font-size: medium;
+        }
+
+        .heading2 h1 {
+            text-align: center;
+            margin: 20px 38vw;
+            border-bottom: 3px solid red;
+
+        }
+
+        .snaks {
+            display: flex;
+            margin: 0 50px;
+            width: 80vw;
+            justify-content: space-evenly;
+            overflow: scroll;
+            position: relative;
+        }
+
+        .snaks::-webkit-scrollbar {
+            display: none;
+        }
+
+        .snaks img {
+            width: 220px;
+            margin: 30px;
+            height: 200px;
+        }
+
+        .snaks .snaks1,
+        .snaks2,
+        .snaks3,
+        .snaks4,
+        .snaks5,
+        .snaks6,
+        .snaks7,
+        .snaks8,
+        .snaks9,
+        .snaks10,
+        .snaks11 {
+            border: 2px solid lightgrey;
+            background-color: rgb(225, 221, 221);
+            margin: 0 20px;
+        }
+
+        .heading2 .icon2 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 80px;
+            padding-bottom: 20px;
+            margin-right: 250px;
+        }
+
+        .heading2 i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .heading2 i:hover {
+            background-color: orange;
+            color: #fff;
+
+        }
+
+        .snaks button {
+            width: 15vw;
+            margin: 10px 23px;
+            border-radius: 15px;
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 1s;
+
+        }
+
+        .snaks button:hover {
+            background-color: orange;
+            color: #fff;
+
+        }
+
+        .snaks h4 {
+            text-align: center;
+            font-weight: 100;
+            font-size: medium;
+        }
+
+        .snaks h6 {
+            text-align: center;
+            padding: 10px 0;
+            color: green;
+            font-size: medium;
+        }
+
+        .heading2 .referral {
+
+            margin-top: 30px;
+            margin-left: 100px;
+
+            width: 80vw;
+            padding-bottom: 10px;
+        }
+
+        .heading3 h1 {
+            text-align: center;
+            margin: 10px 41vw;
+            border-bottom: 3px solid red;
+
+        }
+
+        .product-list img {
+            width: 220px;
+            margin: 30px;
+            height: 200px;
+
+        }
+
+        .product-list {
+            display: flex;
+            overflow: scroll;
+            margin: 0 50px;
+            width: 80vw;
+            justify-content: space-evenly;
+        }
+
+        .product-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-list .list1,
+        .list2,
+        .list3,
+        .list4,
+        .list5,
+        .list6 {
+            border: 2px solid lightgrey;
+            background-color: rgb(225, 221, 221);
+            margin: 0 20px;
+
+        }
+
+        .product-list button {
+            width: 15vw;
+            margin: 10px 23px;
+            border-radius: 15px;
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 1s;
+
+        }
+
+        .product-list button:hover {
+            background-color: orange;
+            color: #fff;
+
+        }
+
+        .heading3 .icon3 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 80px;
+            padding-bottom: 20px;
+            margin-right: 250px;
+        }
+
+        .heading3 i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .heading3 i:hover {
+            background-color: orange;
+            color: #fff;
+        }
+
+        .ordernow {
+            border-top: 2px solid lightgrey;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ordernow img {
+            margin: 20px;
+            height: 500px;
+        }
+
+        .btn button {
+            background-color: rgb(235, 209, 209);
+            color: black;
+            font-weight: 800;
+            font-size: medium;
+            border: none;
+            width: 8vw;
+            padding: 10px;
+            border-radius: 16px;
+            cursor: pointer;
+           
+        }
+        @keyframes button{
+            from{
+                transform: scale(0);
+
+            }
+            to{
+                transform: scale(3);
+
+            }
+        }
+
+        .btn {
+            text-align: center;
+            box-shadow: #000;
+          
+          
+
+
+        }
+
+        .btn button:hover {
+            background-color: orange;
+            color: #fff;
+            margin-bottom: 10px;
+            
+        }
+        
+
+        footer {
+            margin-top: 20px;
+            background-color: rgb(234, 225, 225);
+            height: 60vh;
+        }
+
+        .info .card1 img {
+            width: 130px;
+        }
+
+        .info .phone {
+            display: flex;
+            margin-left: 10px;
+
+        }
+
+        .info .phone i {
+            padding: 5px;
+            gap: 5px;
+
+        }
+
+        .info .phone p {
+            display: flex;
+            align-items: center;
+        }
+
+        .info .mail a {
+            text-decoration: none;
+            color: #000;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .info .mail a:hover {
+            color: orange;
+        }
+
+        .info .mail {
+            margin-left: 14px;
+            margin-top: 10px;
+        }
+
+        .info .address {
+            margin-left: 10px;
+            margin-top: 13px;
+            display: flex;
+            width: 25vw;
+        }
+
+        .info .address i {
+            padding: 5px;
+
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            height: 50vh;
+            width: 95vw;
+            margin: 10px ;
+            margin-left: 25px;
+            border-bottom: 2px solid lightgray;
+
+
+        }
+
+        .info .links .links0 a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .info .links .links0 a:hover {
+            color: orange;
+        }
+
+        .info .links .links0 {
+            margin-top: 30px;
+        }
+
+        .info .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            
+        }
+
+        .info .links .links1 a,
+        .links2 a,
+        .links3 a,
+        .links4 a,
+        .links5 a {
+            text-decoration: none;
+            color: rgb(106, 106, 106);
+        }
+        .follow .socialmedia{
+            display: flex;
+            padding: 15px;
+            flex-direction: column;
+            
+            justify-content: space-between;
+            text-align: center;
+        }
+        .follow .socialmedia i{
+            font-size: 32px;
+            padding: 20px;
+            color: #000;
+            cursor: pointer;
+        }
+        .follow .socialmedia h1{
+            font-weight: 500;
+            font-size: 26px;
+            margin-top: 5px;
+        }
+        .follow .socialmedia i:hover{
+            color: orange;
+        }
+        .info .copyright {
+           position: relative;
+           top: 30px;
+           right: 990px;
+        }
+      
+
+        
+    </style>
+    <nav class="navigation">
+        <div class="logo">
+            <img src="./images/Srikanth-removebg-preview.png" alt="Logo missing" width="110px">
+
+        </div>
+        <div class="links">
+            <ul>
+
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i>Location</a></li>
+
+                <li>
+                    <a href=""> <i class="fa-solid fa-magnifying-glass"></i>Search
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa-solid fa-heart"></i>Wishlist</a>
+                </li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                </li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="hero">
+
+        <div class="cont-icons">
+            <h1>Your Go-To Brands</h1>
+
+            <div class="icons">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+
+
+
+
+        <div class="brands">
+
+
+            <div class="img1">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240627/529e0777-759b-43e6-b991-b35897d1eee6-1024X1024SQUARE.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img2">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/e5be13b5-f693-41ba-a210-4a9e874926ac-bambino.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img3">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/6216c6f9-b27e-4922-8844-80dfee83cc83-haldirams.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img4">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/a7f7ef73-852e-41f9-afa1-bdc8051f3c4a-heritage.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img5">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/c707692a-9987-4566-a6df-f1a66b84b49e-Cadburylogonew.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img6">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/6336e00c-3411-4319-aaa8-e3876339c4d2-kwal.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img7">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/b96611b4-b93f-4eb5-aae8-a3269e9a9855-cocacola.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img8">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240408/a375d3a2-d059-473a-bd42-718d93d3a67b-unnamed.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img9">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/193771af-b78e-4fa4-ab31-db43bbfa1c0c-itclimitedlogo.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img10">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/738babcc-e995-4f60-b502-9dfa066851e2-24mantra.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img11">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/ca01f433-2dc9-49d0-baf6-752b2c7304a4-idfresh.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img12">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/b4f10cd9-121c-48b8-8dba-e639a7755710-amul.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img13">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/2e6b9d68-f870-4dc1-a7c3-2113d7361957-mtr.webp"
+                    alt="Brand is missing">
+            </div>
+            <div class="img14">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240410/fdd08b80-6c94-4b48-aa7e-c0b545ed8eb9-priya.webp"
+                    alt="Brand is missing">
+            </div>
+
+        </div>
+    </div>
+    <div class="poster">
+        <img src="./images/poster.png" alt="">
+    </div>
+    <div class="products">
+        <div class="heading">
+            <h1>Your Shortcut to Convenience</h1>
+            <span class="icon1">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+        </div>
+
+
+
+        <div class="products-img">
+
+
+            <div class="product1">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240709/b78f0cdf-d2b9-4f2b-92eb-ed4b267b142a-SKU0327482.webp"
+                    alt="image is missing">
+                <p>10% off</p>
+                <h4>Tomato Local-Tamatar</h4>
+                <h6>₹100</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+            <div class="product2">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240326/e342dd87-d5e1-41c8-b733-40c239e8fd72-032756.webp"
+                    alt="image is missing">
+                <p>7% off</p>
+                <h4>Onion Red-Ullipaya</h4>
+                <h6>₹49</h6>
+
+                <button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product3">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240326/3583155e-09fc-435c-ae09-73b6da1db81e-PV032740.webp"
+                    alt="image is missing">
+                <p>15% off</p>
+                <h4>Potato-Aloo</h4>
+                <h6>₹112</h6>
+                <button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product4">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU018707-20240128-070812.webp"
+                    alt="image is missing">
+                <p>10% off</p>
+                <h4>Heritage Curd</h4>
+                <h6>₹49</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product5">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240313/SKU002212-20240313-115418.webp"
+                    alt="image is missing">
+                <h4>Idly Rava</h4>
+                <h6>₹79</h6>
+                <button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product6">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240206/SKU018723-20240206-053348.webp"
+                    alt="image is missing">
+                <h4>Panner</h4>
+                <h6>₹95</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product7">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240705/2faace50-1722-4f94-aa13-ef2bdbf4092e-SKU002203.webp"
+                    alt="image is missing">
+                <h4>
+                    Vijetha Whole Wheat Atta-5 kg</h4>
+                <h6>210</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product8">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU000880-20240319-090049.webp"
+                    alt="image is missing">
+                <h4>Maggie</h4>
+                <h6>₹102</h6>
+                <button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product9">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU005048-20240319-115926.webp"
+                    alt="image is missing">
+                <h4>Vim-Soap</h4>
+                <h6>₹16</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product10">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU013843-20240128-070952.webp"
+                    alt="image is missing">
+                <h4>Milk</h4>
+                <h6>₹35</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="product11">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU002073-20240128-071409.webp"
+                    alt="image is missing">
+                <h4>Rice Kurnool</h4>
+                <h6>₹1500</h6><button>
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="heading2">
+        <h1>The Great Indian Snacks</h1>
+        <span class="icon2">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+        </span>
+        <div class="snaks">
+            <div class="snaks1">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240122/SKU011211-20240122-175135.webp"
+                    alt="image is missing">
+                <h4>Popular Palli Laddu</h4>
+                <h6>₹60</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+            </div>
+            <div class="snaks2">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU034369-20240128-074155.webp"
+                    alt="image is missing">
+                <h4>Popular Palli Chikki</h4>
+                <h6>₹30</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+            </div>
+            <div class="snaks3">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU011218-20240319-091223.webp"
+                    alt="image is missing">
+                
+                <h4>Popular Chana</h4>
+                <h6>₹55</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+            <div class="snaks4">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU011212-20240128-074201.webp"
+                     alt="image is missing">
+                <h4>Popular Til Chikki</h4>
+                <h6>₹55</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+            </div>
+            <div class="snaks5">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240128/SKU016679-20240128-074144.webp"
+                    alt="image is missing">
+                <h4> Popular Khara Dal Chakodi
+                </h4>
+                <h6>₹66</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+            <div class="snaks6">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240122/SKU016676-20240122-183511.webp"
+                    alt="image is missing">
+                <h4> Popular Khara Yellow Chakodi
+
+                </h4>
+                <h6>₹66</h6>
+                <button>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="snaks7">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240122/SKU034370-20240122-122609.webp"
+                    alt="image is missing">
+                <h4>Popular Special Murmura Laddu
+
+                </h4>
+                <h6>₹60</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+            </div>
+            <div class="snaks8">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU011217-20240319-120223.webp"
+                    alt="image is missing">
+                <h4>Popular Batana
+                </h4>
+                <h6>₹55</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+            <div class="snaks9">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU016685-20240319-094128.webp"
+                    alt="image is missing">
+                <h4>Popular Khara Corn Flakes Mixture
+                </h4>
+                <h6>₹66</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+            <div class="snaks10">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240319/SKU011230-20240319-093850.webp"
+                    alt="image is missing">
+                <h4>Popular Butter Chakli
+                </h4>
+                <h6>₹54</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+            </div>
+            <div class="snaks1">
+                <img src="https://i1.zopping.com/zopping-uploads/24019/images/320/20240122/SKU000981-20240122-160922.webp"
+                    alt="image is missing">
+                <h4> Popular Khara
+                </h4>
+                <h6>₹54</h6>
+                <button>
+                    Add to Cart
+                </button>
+
+
+            </div>
+
+        </div>
+        <img src="https://i1.zopping.com/zopsmart-media/24019/images/1024/20240618/b3b7338e-05bf-4068-a307-ec287800b828-WhatsAppImage20240618at14316PM3.webp"
+            alt="" class="referral">
+    </div>
+    <div class="heading3">
+        <h1>For your Kitchen</h1>
+        <span class="icon3">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+        </span>
+        <div class="product-list">
+            <div class="list1">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240627/761d37eb-2afd-4450-8763-f296b52065c7-imagefile.webp"
+                    alt="">
+                <button>
+                    Vegetables
+                </button>
+
+            </div>
+            <div class="list2">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240628/dfa927a7-824e-45a9-ba1d-e35c13068f6e-imagefile.webp"
+                    alt="">
+                <button>
+                    Pulses
+                </button>
+
+            </div>
+            <div class="list3">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240628/19212036-6563-4d45-a1fd-9008f07dd750-imagefile.webp"
+                    alt="">
+                <button>
+                    Rice
+                </button>
+
+            </div>
+            <div class="list4">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240707/46270a75-26ca-46a2-a438-d49e80efc906-imagefile.webp"
+                    alt="">
+                <button>
+                    Milk
+                </button>
+
+            </div>
+            <div class="list5">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240630/d5a41035-4232-495b-a121-a78b39dbeabd-imagefile.webp"
+                    alt="">
+                <button>
+                    Adible oils
+                </button>
+
+            </div>
+
+            <div class="list6">
+                <img src="https://i1.zopping.com/zopsmart-media/24019/images/320/20240701/b00ac84f-925f-4ed1-a7dd-e817e0cc521e-imagefile.webp"
+                    alt="">
+                <button>
+                    Fruits
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div class="ordernow">
+        <img src="./images/1.png" alt="">
+    </div>
+    <div class="btn">
+        <button>Order Now</button>
+    </div>
+    <footer>
+        <div class="info">
+            <div class="card1">
+                <img src="./images/Srikanth-removebg-preview.png" alt="Logo is missing">
+                <div class="phone">
+                  
+                    <i class="fa-solid fa-phone">
+
+                    </i>
+                    <p>+917095122779</p>
+
+                </div>
+                <div class="mail">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:Srikanthuma96@gmail.com">Srikanthuma96@gmail.com</a>
+                </div>
+                <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>5-179/A, Lashmi vihari phase 1, Nallagandla,Hyderabad, Telalanga, 500019</p>
+                </div>
+            </div>
+            <div class="links">
+                <div class="links0">
+                    <a href="#">Quick links</a>
+                </div>
+                <div class="links1">
+                    <a href="#">FAQS</a>
+                </div>
+                <div class="links2">
+                    <a href="#">Privacy policy</a>
+                </div>
+                <div class="links3">
+                    <a href="#">Shipping Policy</a>
+                </div>
+                <div class="links4">
+                    <a href="#">Cancellation And Return Policy</a>
+                </div>
+                <div class="links5">
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+            <div class="follow">
+                <div class="socialmedia">
+                    <h1>
+                        follow us on
+                    </h1>
+                    
+                   <span> <a href="https://wa.me/+917095122779" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i></span>
+                    <span>
+                        <a href="https://t.me/+917095122779" target="_blank">
+                       
+                        <i class="fa-brands fa-x-twitter"></i></span>
+                    <span> <a href="" target="-blank">
+
+                    <i class="fa-brands fa-youtube"></i></span>
+                   <span> <a href="" target="-blank">
+
+                   <i class="fa-brands fa-instagram"></i></span>
+                </div>
+               
+            
+              
+            </div>
+          
+
+    </footer>
+
+
+</body>
+
+</html>
