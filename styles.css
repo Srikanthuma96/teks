@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./images/backgrond\ login.png );
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.Login{
+    background-color:orange;
+    width: 420px;
+    padding: 30px 35px;
+    border-radius: 13px;
+   
+
+}
+.Login h1{
+    text-align: center;
+    background-color: orange;
+
+}
+.box{
+    position:relative;
+    border-radius: 12px;
+    height: 50px;
+    background-color: orange;
+    margin: 10px;
+   
+}
+
+.box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none ;
+    border: 2px solid ;
+    border-radius: 40px;
+    font-size: medium;
+    padding-inline-start: 10px;
+}
+   
+.box input::placeholder{
+    color:aliceblue;
+}
+.box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+
+}
+
+.Login{
+    text-align: center;
+}
+#hide1{
+    display: none;
+}
+
+.register{
+    background-color: orange;
+}
+.remember{
+    text-align: start;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.forget{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+   
